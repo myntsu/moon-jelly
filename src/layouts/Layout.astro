@@ -6,6 +6,9 @@ interface Props {
 const { title } = Astro.props;
 
 import '../css/global.scss';
+
+import Header from '../components/Header.astro';
+import Nav from '../components/Nav.astro';
 ---
 
 <!doctype html>
@@ -19,7 +22,13 @@ import '../css/global.scss';
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="main-container">
+			<Header/>
+			<Nav/>	
+			<main>
+				<slot />
+			</main>
+		</div>
 	</body>
 </html>
 
