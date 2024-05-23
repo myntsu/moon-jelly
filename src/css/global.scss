@@ -7,12 +7,12 @@
 }
 
 :root {
-  --soft-orange: #fdd1b0;
-  --soft-yellow: #fcf6bc;
-  --soft-green: #d6edda;
-  --soft-blue: #bde7fb;
-  --soft-purple: #e6cbe2;
-  --soft-pink: #fbdde9;
+  --soft-orange: 26, 95%, 84%;
+  --soft-yellow: 54, 91%, 86%;
+  --soft-green: 130, 39%, 88%;
+  --soft-blue: 199, 89%, 86%;
+  --soft-purple: 309, 35%, 85%;
+  --soft-pink: 336, 79%, 93%;
 
   --text: 0 0% 91%;
   --background: 0 0% 6%;
@@ -74,7 +74,7 @@ body {
   margin: 0;
 
   color: hsl(var(--text));
-  background: hsl(var(--background));
+  background: hsl(var(--soft-purple));
   font-family: "DM Sans", sans-serif;
 }
 
