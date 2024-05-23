@@ -1,39 +1,99 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 
-import '../css/global.scss';
+import "../css/global.scss";
 
-import Header from '../components/Header.astro';
-import Nav from '../components/Nav.astro';
+import Header from "../components/Header.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="main-container">
-			<Header/>
-			<Nav/>	
-			<main>
-				<slot />
-			</main>
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Astro description"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <Header />
+      <Nav />
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
 </html>
 
+<style lang="scss">
+  .main-container {
+    --_nav-width: 350px;
+    --_header-height: 100px;
+    container-type: inline-size;
+
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav main";
+    grid-template-columns: var(--_nav-width) 1fr;
+    grid-template-rows: var(--_header-height) 1fr;
+
+    height: 100%;
+    height: 100svh;
+
+    &:has(nav[aria-expanded="false"]) {
+      --_nav-width: 0px;
+    }
+
+    @media (max-width: 870px) {
+      --_nav-width: 0px;
+      grid-template-areas:
+        "header header"
+        "main main";
+
+      nav {
+        position: absolute;
+        top: var(--_header-height);
+        min-height: calc(100% - var(--_header-height));
+        translate: -350px 0px;
+
+        &:is(.visible) {
+          translate: 0px 0px;
+          li {
+            &:is(:hover, :focus-visible, .selected) {
+              a {
+                padding-inline-start: 1rem !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
+
 <script>
-	import '../script/copyright.js';
-	import '../script/hamburger.js';
-	import '../script/settings.js';
+  import "../script/copyright.js";
+  import "../script/hamburger.js";
+  import "../script/settings.js";
 </script>
