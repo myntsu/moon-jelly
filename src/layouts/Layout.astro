@@ -39,13 +39,15 @@ import Nav from "../components/Nav.astro";
       <Header />
       <Nav />
       <main>
-        <slot />
+        <div class="content">
+          <slot />
+        </div>
       </main>
     </div>
   </body>
 </html>
 
-<style lang="scss">
+<style lang="scss" is:global>
   .main-container {
     --_nav-width: 350px;
     --_header-height: 100px;
@@ -87,6 +89,45 @@ import Nav from "../components/Nav.astro";
             }
           }
         }
+      }
+    }
+  }
+
+  main {
+    grid-area: main;
+
+    container-type: inline-size;
+
+    background-image: url(https://cdn.discordapp.com/attachments/314296024833196036/1164681617789431938/latest.png?ex=65441948&is=6531a448&hm=9f25b100752249d3b3ab6332bfa80da50a0ad4af22cb42f453f6c40531b49795&);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: fixed;
+    overflow-y: scroll;
+
+    .content {
+      min-height: 500%;
+      padding: 1rem;
+      z-index: 0;
+      background-color: hsl(var(--dark-500));
+      border: 1px solid hsl(200 70% 70%);
+
+      & > * {
+        width: 100%;
+        max-width: 600px;
+        margin-inline: auto;
+        padding: 1rem;
+        border: 1px solid hsl(0 70% 70%);
+      }
+    }
+  }
+
+  @container (max-width: 600px) {
+    main {
+      .content {
+        align-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
       }
     }
   }
