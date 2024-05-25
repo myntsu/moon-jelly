@@ -45,7 +45,7 @@
 }
 
 :hover::-webkit-scrollbar {
-  background-color: hsl(var(--dark-300));
+  background-color: hsl(var(--soft-orange));
 }
 
 ::-webkit-scrollbar-thumb {
@@ -73,8 +73,8 @@ body {
 body {
   margin: 0;
 
-  color: hsl(var(--text));
-  background: hsl(var(--soft-purple));
+  color: hsl(26, 95%, 24%);
+  background: hsl(26, 95%, 88%);
   font-family: "DM Sans", sans-serif;
 }
 
@@ -100,7 +100,7 @@ button {
   aspect-ratio: 1;
 
   &:is(button) {
-    color: hsl(var(--text));
+    color: hsl(var(--soft-blue));
   }
 
   &:is(.icon) {
@@ -111,18 +111,19 @@ button {
   &:is(.hamburger-menu) {
     width: 50px;
 
-    background-color: hsl(var(--dark-100));
+    background-color: hsl(var(--soft-yellow));
     border: none;
     border-radius: 50%;
 
     cursor: pointer;
 
     &:is(:hover, :focus-visible) {
-      background-color: hsl(var(--dark-300));
+      color: hsl(var(--soft-yellow));
+      background-color: hsl(var(--soft-blue));
     }
 
     &:is(:active) {
-      background-color: hsl(var(--dark-500));
+      background-color: hsl(var(--soft-yellow));
     }
   }
 }

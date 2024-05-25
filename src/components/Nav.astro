@@ -126,7 +126,7 @@
   min-height: 100%;
   z-index: 9999;
   overflow-y: auto;
-  background-color: hsl(var(--soft-pink));
+  background-color: hsl(var(--soft-orange));
 
   transition: translate 200ms cubic-bezier(0.02, 0.83, 0.3, 0.97);
 
@@ -161,16 +161,16 @@
       white-space: nowrap;
 
       &:is(:hover, :focus-visible, .selected) {
-        background-color: hsl(var(--important));
+        background-color: hsl(var(--soft-yellow));
 
         a {
           padding-inline-start: 1.5rem;
-          color: hsl(var(--background));
+          color: hsl(26, 95%, 14%);
         }
 
         .tag {
-          color: hsl(var(--dark-100));
-          background-color: hsl(var(--background));
+          color: hsl(199, 89%, 26%);
+          background-color: hsl(var(--soft-blue));
         }
       }
     }
@@ -182,7 +182,7 @@
       padding-inline: 1rem;
       padding-block: 1.5rem;
 
-      color: hsl(var(--dark-100));
+      color: hsl(26, 95%, 24%);
       text-decoration: none;
       font-weight: 700;
 
@@ -198,8 +198,8 @@
       margin-inline-end: 0.5rem;
       padding-block: 0.25rem;
 
-      color: hsl(var(--background));
-      background-color: hsl(var(--important));
+      color: hsl(199, 89%, 26%);
+      background-color: hsl(var(--soft-blue));
       border-radius: 99999px;
 
       font-size: 0.875rem;
@@ -222,7 +222,7 @@
     padding-block: 0.5rem;
 
     a {
-      color: hsl(var(--text));
+      color: hsl(26, 95%, 14%);
       opacity: 0.5;
       transition: opacity 100ms linear, scale 100ms linear, rotate 100ms ease-in;
 
@@ -234,7 +234,7 @@
       }
 
       &:is(:active) {
-        background-color: hsl(var(--dark-300));
+        background-color: hsl(var(--soft-yellow));
         border-radius: 0.25rem;
       }
     }
@@ -246,7 +246,7 @@
     gap: 1rem;
     padding-block: 1rem;
     text-align: center;
-    color: hsl(var(--text) / 0.5);
+    color: hsl(26, 95%, 24% / .8);
 
     p {
       margin: 0;
@@ -256,13 +256,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
-      color: hsl(var(--important) / 0.7);
+      color: hsl(26, 95%, 14% / .7);
 
       &:is(:hover, :focus-visible) {
-        color: hsl(var(--text));
+        color: hsl(26, 95%, 14%);
 
         .icon {
-          color: hsl(var(--text));
+          color: hsl(26, 95%, 14%);
         }
       }
 
