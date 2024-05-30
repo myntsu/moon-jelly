@@ -126,7 +126,7 @@
   min-height: 100%;
   z-index: 9999;
   overflow-y: auto;
-  background-color: hsl(var(--soft-orange));
+  background-color: hsl(var(--soft-pink));
 
   transition: translate 200ms cubic-bezier(0.02, 0.83, 0.3, 0.97);
 
@@ -161,16 +161,16 @@
       white-space: nowrap;
 
       &:is(:hover, :focus-visible, .selected) {
-        background-color: hsl(var(--soft-yellow));
+        background-color: hsl(var(--soft-pink-text));
 
         a {
           padding-inline-start: 1.5rem;
-          color: hsl(26, 95%, 14%);
+          color: hsl(var(--text));
         }
 
         .tag {
-          color: hsl(199, 89%, 26%);
-          background-color: hsl(var(--soft-blue));
+          color: hsl(var(--soft-pink-text));
+          background-color: hsl(var(--text));
         }
       }
     }
@@ -182,7 +182,7 @@
       padding-inline: 1rem;
       padding-block: 1.5rem;
 
-      color: hsl(26, 95%, 24%);
+      color: hsl(var(--soft-pink-text));
       text-decoration: none;
       font-weight: 700;
 
@@ -198,8 +198,8 @@
       margin-inline-end: 0.5rem;
       padding-block: 0.25rem;
 
-      color: hsl(199, 89%, 26%);
-      background-color: hsl(var(--soft-blue));
+      color: hsl(var(--text));
+      background-color: hsl(var(--soft-pink-text));
       border-radius: 99999px;
 
       font-size: 0.875rem;
