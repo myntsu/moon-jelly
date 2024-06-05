@@ -72,24 +72,6 @@ import Nav from "../components/Nav.astro";
       grid-template-areas:
         "header header"
         "main main";
-
-      nav {
-        position: absolute;
-        top: var(--_header-height);
-        min-height: calc(100% - var(--_header-height));
-        translate: -350px 0px;
-
-        &:is(.visible) {
-          translate: 0px 0px;
-          li {
-            &:is(:hover, :focus-visible, .selected) {
-              a {
-                padding-inline-start: 1rem !important;
-              }
-            }
-          }
-        }
-      }
     }
   }
 
