@@ -1,4 +1,4 @@
-<nav id="nav">
+<!-- <nav id="nav">
   <div class="nav-container">
     <div class="nav-inner">
       <ul>
@@ -111,172 +111,172 @@
       >
     </div>
   </footer>
-</nav>
+</nav> -->
 
 
 <style lang="scss">
-  nav {
-  grid-area: nav;
+//   nav {
+//   grid-area: nav;
 
-  display: flex;
-  flex-direction: column;
+//   display: flex;
+//   flex-direction: column;
 
-  position: sticky;
-  top: 0;
-  min-height: 100%;
-  z-index: 9999;
-  overflow-y: auto;
-  background-color: hsl(var(--soft-pink));
+//   position: sticky;
+//   top: 0;
+//   min-height: 100%;
+//   z-index: 9999;
+//   overflow-y: auto;
+//   background-color: hsl(var(--soft-pink));
 
-  transition: translate 200ms cubic-bezier(0.02, 0.83, 0.3, 0.97);
+//   transition: translate 200ms cubic-bezier(0.02, 0.83, 0.3, 0.97);
 
-  .nav-container {
-    display: flex;
-    flex-direction: column;
-  }
+//   .nav-container {
+//     display: flex;
+//     flex-direction: column;
+//   }
 
-  .nav-inner {
-    font-size: 1.5rem;
-    user-select: none;
-    padding-block: 1rem;
+//   .nav-inner {
+//     font-size: 1.5rem;
+//     user-select: none;
+//     padding-block: 1rem;
 
-    ul,
-    li {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+//     ul,
+//     li {
+//       list-style: none;
+//       margin: 0;
+//       padding: 0;
+//     }
 
-    ul {
-      display: flex;
-      flex-direction: column;
-    }
+//     ul {
+//       display: flex;
+//       flex-direction: column;
+//     }
 
-    li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
+//     li {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       gap: 1rem;
 
-      white-space: nowrap;
+//       white-space: nowrap;
 
-      &:is(:hover, :focus-visible, .selected) {
-        background-color: hsl(var(--soft-pink-text));
+//       &:is(:hover, :focus-visible, .selected) {
+//         background-color: hsl(var(--soft-pink-text));
 
-        a {
-          padding-inline-start: 1.5rem;
-          color: hsl(var(--text));
-        }
+//         a {
+//           padding-inline-start: 1.5rem;
+//           color: hsl(var(--text));
+//         }
 
-        .tag {
-          color: hsl(var(--soft-pink-text));
-          background-color: hsl(var(--text));
-        }
-      }
-    }
+//         .tag {
+//           color: hsl(var(--soft-pink-text));
+//           background-color: hsl(var(--text));
+//         }
+//       }
+//     }
 
-    a {
-      width: 100%;
-      height: 100%;
+//     a {
+//       width: 100%;
+//       height: 100%;
 
-      padding-inline: 1rem;
-      padding-block: 1.5rem;
+//       padding-inline: 1rem;
+//       padding-block: 1.5rem;
 
-      color: hsl(var(--soft-pink-text));
-      text-decoration: none;
-      font-weight: 700;
+//       color: hsl(var(--soft-pink-text));
+//       text-decoration: none;
+//       font-weight: 700;
 
-      transition: padding-inline-start 150ms linear;
-    }
+//       transition: padding-inline-start 150ms linear;
+//     }
 
-    .tag {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+//     .tag {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
 
-      width: 5rem;
-      margin-inline-end: 0.5rem;
-      padding-block: 0.25rem;
+//       width: 5rem;
+//       margin-inline-end: 0.5rem;
+//       padding-block: 0.25rem;
 
-      color: hsl(var(--text));
-      background-color: hsl(var(--soft-pink-text));
-      border-radius: 99999px;
+//       color: hsl(var(--text));
+//       background-color: hsl(var(--soft-pink-text));
+//       border-radius: 99999px;
 
-      font-size: 0.875rem;
-      font-weight: 700;
-    }
-  }
+//       font-size: 0.875rem;
+//       font-weight: 700;
+//     }
+//   }
 
-  aside {
-    margin-block-start: auto;
-  }
+//   aside {
+//     margin-block-start: auto;
+//   }
 
-  .socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+//   .socials {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 1rem;
 
-    cursor: pointer;
-    padding-inline: 0.5rem;
-    padding-block: 0.5rem;
+//     cursor: pointer;
+//     padding-inline: 0.5rem;
+//     padding-block: 0.5rem;
 
-    a {
-      color: hsl(26, 95%, 14%);
-      opacity: 0.5;
-      transition: opacity 100ms linear, scale 100ms linear, rotate 100ms ease-in;
+//     a {
+//       color: hsl(26, 95%, 14%);
+//       opacity: 0.5;
+//       transition: opacity 100ms linear, scale 100ms linear, rotate 100ms ease-in;
 
-      &:is(:hover, :focus-visible) {
-        opacity: 1;
-        scale: 1.2;
-        rotate: 5deg;
-        text-shadow: 2px 2px 0 0 red;
-      }
+//       &:is(:hover, :focus-visible) {
+//         opacity: 1;
+//         scale: 1.2;
+//         rotate: 5deg;
+//         text-shadow: 2px 2px 0 0 red;
+//       }
 
-      &:is(:active) {
-        background-color: hsl(var(--soft-yellow));
-        border-radius: 0.25rem;
-      }
-    }
-  }
+//       &:is(:active) {
+//         background-color: hsl(var(--soft-yellow));
+//         border-radius: 0.25rem;
+//       }
+//     }
+//   }
 
-  footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    padding-block: 1rem;
-    text-align: center;
-    color: hsl(26, 95%, 24% / .8);
+//   footer {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+//     gap: 1rem;
+//     padding-block: 1rem;
+//     text-align: center;
+//     color: hsl(26, 95%, 24% / .8);
 
-    p {
-      margin: 0;
-    }
+//     p {
+//       margin: 0;
+//     }
 
-    a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      color: hsl(26, 95%, 14% / .7);
+//     a {
+//       display: inline-flex;
+//       align-items: center;
+//       gap: 0.25rem;
+//       color: hsl(26, 95%, 14% / .7);
 
-      &:is(:hover, :focus-visible) {
-        color: hsl(26, 95%, 14%);
+//       &:is(:hover, :focus-visible) {
+//         color: hsl(26, 95%, 14%);
 
-        .icon {
-          color: hsl(26, 95%, 14%);
-        }
-      }
+//         .icon {
+//           color: hsl(26, 95%, 14%);
+//         }
+//       }
 
-      .icon {
-        color: inherit;
-        width: 15px !important;
-        position: relative;
-        top: 1px;
-      }
-    }
+//       .icon {
+//         color: inherit;
+//         width: 15px !important;
+//         position: relative;
+//         top: 1px;
+//       }
+//     }
 
-    small {
-      font-size: 0.75rem;
-    }
-  }
-}
+//     small {
+//       font-size: 0.75rem;
+//     }
+//   }
+// }
 </style>
