@@ -56,7 +56,7 @@ import Nav from "../components/Nav.astro";
     display: grid;
     grid-template-areas:
       "header header"
-      "nav main";
+      "main main";
     grid-template-columns: var(--_nav-width) 1fr;
     grid-template-rows: var(--_header-height) 1fr;
 
@@ -65,13 +65,6 @@ import Nav from "../components/Nav.astro";
 
     &:has(nav[aria-expanded="false"]) {
       --_nav-width: 0px;
-    }
-
-    @media (max-width: 870px) {
-      --_nav-width: 0px;
-      grid-template-areas:
-        "header header"
-        "main main";
     }
   }
 
