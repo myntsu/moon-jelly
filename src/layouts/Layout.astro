@@ -9,6 +9,7 @@ import "../css/global.scss";
 
 import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
+import Waves from "../components/utility/Waves.astro";
 ---
 
 <!doctype html>
@@ -35,6 +36,7 @@ import Nav from "../components/Nav.astro";
     <title>{title}</title>
   </head>
   <body>
+    <Waves />
     <div class="main-container">
       <Header />
       <Nav />
