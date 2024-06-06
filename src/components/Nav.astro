@@ -1,10 +1,10 @@
 <div class="phone-container">
-  <div class="phone-case">
+  <!-- <div class="phone-case">
     <img
       src="/src/assets/images/phonecase.png"
       alt=""
     />
-  </div>
+  </div> -->
   <div class="content">
     <nav>
       <div class="nav-inner">
@@ -14,7 +14,7 @@
           </li>
           <li>
             <a href="/commissions">Commissions</a>
-            <span class="tag">Open</span>
+            <!-- <span class="tag">Open</span> -->
           </li>
           <li>
             <a href="/portfolio">Portfolio</a>
@@ -240,9 +240,14 @@
 <style lang="scss">
   .phone-container {
     position: absolute;
-    left: 18.5rem;
+    left: 15%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
+
+    background-color: hsl(201, 74%, 85%);
+    border-radius: .5rem;
+    box-shadow: -10px 10px 10px hsl(201, 100%, 25%, .8);
   }
 
   .phone-case {
@@ -252,7 +257,7 @@
 
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
 
     img {
       display: block;
@@ -262,7 +267,7 @@
   }
 
   .content {
-    padding: 6rem;
+    padding: 1rem;
   }
 
   nav {
@@ -270,6 +275,7 @@
     flex-direction: column;
 
     overflow: hidden;
+    border-style: dashed;
 
     .nav-inner {
       font-size: 1.5rem;
@@ -315,8 +321,7 @@
         width: 100%;
         height: 100%;
 
-        padding-inline: 1rem;
-        padding-block: 1.5rem;
+        padding: 1rem;
 
         color: hsl(var(--soft-pink-text));
         text-decoration: none;
