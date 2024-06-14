@@ -1,24 +1,35 @@
 ---
+import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
+
+import tabletImage from "../assets/images/Tablet.png";
 ---
 
 <Layout title="Moon Jelly - Home">
   <div>
-    <div class="fake-img">IMAGE HERE</div>
-    <h2>About Me</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tempore odio
-      vel. Cumque exercitationem eaque suscipit ad, ducimus corrupti minima
-      maiores magni, laborum deserunt corporis! Dolore eaque dolorem deserunt
-      illum!
-    </p>
-
-    <h2>Some extra yapping</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla similique
-      error quis distinctio iusto! Autem, dolorem odit. Doloribus rerum officia
-      asperiores id esse, rem officiis, soluta, blanditiis fugiat iste repellat?
-    </p>
-    <div class="fake-img">SAMPLES HERE</div>
+    <div class="content">
+      <Image src={tabletImage} alt="Display tablet" class="tablet"/>
+      some test
+    </div>
   </div>
 </Layout>
+
+<style>
+.content {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+}
+
+.tablet {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: top;
+}
+</style>
