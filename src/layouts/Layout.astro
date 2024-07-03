@@ -8,7 +8,6 @@ const { title } = Astro.props;
 import "../css/global.scss";
 
 import Header from "../components/Header.astro";
-// import Nav from "../components/Nav.astro";
 import Waves from "../components/utility/Waves.astro";
 ---
 
@@ -38,7 +37,7 @@ import Waves from "../components/utility/Waves.astro";
   <body>
     <Waves />
     <div class="main-container">
-      <Header />
+      <!-- <Header /> -->
       <!-- <Nav /> -->
       <main>
         <div class="content">
@@ -75,7 +74,7 @@ import Waves from "../components/utility/Waves.astro";
 
     container-type: inline-size;
 
-    background-image: url(https://cdn.discordapp.com/attachments/314296024833196036/1164681617789431938/latest.png?ex=65441948&is=6531a448&hm=9f25b100752249d3b3ab6332bfa80da50a0ad4af22cb42f453f6c40531b49795&);
+    background-image: url();
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -83,13 +82,12 @@ import Waves from "../components/utility/Waves.astro";
     overflow-y: scroll;
 
     .content {
-      min-height: 500%;
       padding: 1rem;
       z-index: 0;
 
       & > * {
         width: 100%;
-        max-width: 600px;
+        max-width: 1000px;
         margin-inline: auto;
         padding: 1rem;
       }
